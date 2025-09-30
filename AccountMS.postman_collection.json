@@ -1,0 +1,43 @@
+{
+  "info": {
+    "name": "AccountMS",
+    "_postman_id": "acc-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Account",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"clientId\": 1, \"type\": \"SAVINGS\", \"balance\": 10, \"status\": \"ACTIVE\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/accounts",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "accounts"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get By Id",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/accounts/1"
+      }
+    }
+  ]
+}
